@@ -1,0 +1,13 @@
+services:
+  appfinancas:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8096:8080"
+    restart: always
+    volumes:
+      - data-protection-keys:/root/.aspnet/DataProtection-Keys
+
+volumes:
+  data-protection-keys:
